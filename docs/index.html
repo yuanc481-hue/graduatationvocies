@@ -1267,6 +1267,31 @@
       <div class="envelope-label">孟亚茹 老师</div>
       <div style="font-size:12px;color:var(--ink-light);">点击拆开信封</div>
     </div>
+
+    <!-- Envelope 3: 高洋 -->
+    <div class="envelope-wrapper" id="env-gao" onclick="openEnvelope('gao')">
+      <div class="envelope-svg-wrap">
+        <svg class="env-svg" viewBox="0 0 180 130" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="30" width="170" height="95" rx="3" fill="#D4B896" stroke="#B8966A" stroke-width="1.5"/>
+          <polygon points="5,125 90,80 175,125" fill="#C9A87A" stroke="#B8966A" stroke-width="0.5"/>
+          <polygon points="5,30 90,80 5,125" fill="#BF9D70" stroke="#B8966A" stroke-width="0.5"/>
+          <polygon points="175,30 90,80 175,125" fill="#BF9D70" stroke="#B8966A" stroke-width="0.5"/>
+          <polygon class="env-flap" points="5,30 90,82 175,30" fill="#D9C09A" stroke="#B8966A" stroke-width="1.5"/>
+          <circle cx="90" cy="30" r="10" fill="#8B1A1A" opacity="0.85"/>
+          <text x="90" y="34" text-anchor="middle" font-size="8" fill="white" font-family="serif">高</text>
+        </svg>
+        <div class="env-letter-peek">
+          <div class="letter-peek-lines">
+            <div class="peek-line"></div>
+            <div class="peek-line"></div>
+            <div class="peek-line"></div>
+            <div class="peek-line" style="width:60%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="envelope-label">高洋 老师</div>
+      <div style="font-size:12px;color:var(--ink-light);">点击拆开信封</div>
+    </div>
   </div>
 
   <!-- Teacher content -->
@@ -1275,6 +1300,7 @@
     <div class="teacher-tabs">
       <div class="teacher-tab active" onclick="switchTeacher('meng', this)">孟亚茹 老师</div>
       <div class="teacher-tab" onclick="switchTeacher('ma', this)">马晓梅 老师</div>
+      <div class="teacher-tab" onclick="switchTeacher('gao', this)">高洋 老师</div>
     </div>
 
     <!-- Meng's messages -->
@@ -1526,6 +1552,123 @@
         </div>
       </div>
     </div><!-- /teacher-ma -->
+
+    <!-- Gao Yang's messages -->
+    <div id="teacher-gao" class="teacher-panel" style="display:none; margin-top:24px; border-top:1px solid rgba(139,26,26,0.15); padding-top:24px;">
+      <div class="grad-tabs">
+        <div class="grad-tab active" onclick="switchGrad('gao','qianxi',this)">钱 希</div>
+        <div class="grad-tab" onclick="switchGrad('gao','wangya',this)">王 娅</div>
+        <div class="grad-tab" onclick="switchGrad('gao','xiayan',this)">夏 妍</div>
+      </div>
+
+      <!-- Gao → Qianxi -->
+      <div class="split-panel active" id="gao-qianxi">
+        <div class="letter-panel">
+          <div class="letter-panel-lines"></div>
+          <div class="letter-panel-header">
+            <div>
+              <div class="letter-to">致</div>
+              <div class="letter-to-name">钱 希</div>
+            </div>
+            <div class="letter-teacher-sig">高洋 老师<br/><span style="font-size:12px;color:var(--ink-light);">2026年</span></div>
+          </div>
+          <div class="letter-text">非常荣幸能成为Shirley学术生涯某一阶段最后的“陪跑者”，全程参与了你的答辩过程。在我眼中，你始终是教学、科研与服务三者并进的多面手，游刃有余，令人钦佩。愿你继续为学院、团队及个人的发展注入力量，开启更广阔的崭新篇章。</div>
+        </div>
+        <div class="photo-panel">
+          <div class="photo-carousel" id="photo-gao-qianxi">
+            <div class="photo-slide active">
+              <img src="./钱希.jpg" alt="钱希照片 1">
+            </div>
+            <div class="photo-slide">
+              <img src="./钱希2.jpg" alt="钱希照片 2">
+            </div>
+            <div class="photo-slide">
+              <img src="./钱希3.jpg" alt="钱希照片 3">
+            </div>
+            <div class="photo-slide">
+              <img src="./钱希4.jpg" alt="钱希照片 4">
+            </div>
+          </div>
+          <div class="photo-nav">
+            <button class="photo-btn" onclick="photoNav('gao-qianxi', -1)">‹</button>
+            <div class="photo-dots" id="dots-gao-qianxi"></div>
+            <button class="photo-btn" onclick="photoNav('gao-qianxi', 1)">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gao → Wangya -->
+      <div class="split-panel" id="gao-wangya">
+        <div class="letter-panel">
+          <div class="letter-panel-lines"></div>
+          <div class="letter-panel-header">
+            <div>
+              <div class="letter-to">致</div>
+              <div class="letter-to-name">王 娅</div>
+            </div>
+            <div class="letter-teacher-sig">高洋 老师<br/><span style="font-size:12px;color:var(--ink-light);">2026年</span></div>
+          </div>
+          <div class="letter-text">你一直是孟老师和团队引以为傲的学生，我也在陕师大刘院长也曾多次提及你的名字。未来步入新岗位，愿你秉持初心，在成就自我的同时，多为学院和事业平台贡献才智，不负期望，继续发光。</div>
+        </div>
+        <div class="photo-panel">
+          <div class="photo-carousel" id="photo-gao-wangya">
+            <div class="photo-slide active">
+              <img src="./王娅1.jpg" alt="王娅照片 1">
+            </div>
+            <div class="photo-slide">
+              <img src="./王娅2.jpg" alt="王娅照片 2">
+            </div>
+            <div class="photo-slide">
+              <img src="./王娅3.jpg" alt="王娅照片 3">
+            </div>
+            <div class="photo-slide">
+              <img src="./王娅4.jpg" alt="王娅照片 4">
+            </div>
+            <div class="photo-slide">
+              <img src="./王娅5.jpg" alt="王娅照片 5">
+            </div>
+            <div class="photo-slide">
+              <img src="./王娅6.jpg" alt="王娅照片 6">
+            </div>
+          </div>
+          <div class="photo-nav">
+            <button class="photo-btn" onclick="photoNav('gao-wangya', -1)">‹</button>
+            <div class="photo-dots" id="dots-gao-wangya"></div>
+            <button class="photo-btn" onclick="photoNav('gao-wangya', 1)">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gao → Xiayan -->
+      <div class="split-panel" id="gao-xiayan">
+        <div class="letter-panel">
+          <div class="letter-panel-lines"></div>
+          <div class="letter-panel-header">
+            <div>
+              <div class="letter-to">致</div>
+              <div class="letter-to-name">夏 妍</div>
+            </div>
+            <div class="letter-teacher-sig">高洋 老师<br/><span style="font-size:12px;color:var(--ink-light);">2026年</span></div>
+          </div>
+          <div class="letter-text">时光荏苒，转眼间你已走完硕士三年的求学旅程。犹记每次期末或年终欢送会上，你总是热情参与，用舞姿点亮现场，用讲解传递思考。新的征程在即，愿你走出别样的风景——正如罗伯特·弗罗斯特所言：“The Road Not Taken.”团队中多数人选择科研之路，但我深信，你将在industry的道路上走得更加从容而精彩，那里才是真正适合你的天地。祝一切顺遂，前程似锦。</div>
+        </div>
+        <div class="photo-panel">
+          <div class="photo-carousel" id="photo-gao-xiayan">
+            <div class="photo-slide active">
+              <img src="./夏妍1.jpg" alt="夏妍照片 1">
+            </div>
+            <div class="photo-slide">
+              <img src="./夏妍2.jpg" alt="夏妍照片 2">
+            </div>
+          </div>
+          <div class="photo-nav">
+            <button class="photo-btn" onclick="photoNav('gao-xiayan', -1)">‹</button>
+            <div class="photo-dots" id="dots-gao-xiayan"></div>
+            <button class="photo-btn" onclick="photoNav('gao-xiayan', 1)">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div><!-- /teacher-content -->
 </section>
@@ -1801,10 +1944,9 @@ function photoNav(id, dir) {
 }
 
 // Init all photo carousels
-['meng-qianxi','meng-wangya','meng-xiayan','ma-qianxi','ma-wangya','ma-xiayan'].forEach(initPhotoCarousel);
-
+    ['meng-qianxi','meng-wangya','meng-xiayan','ma-qianxi','ma-wangya','ma-xiayan','gao-qianxi','gao-wangya','gao-xiayan'].forEach(initPhotoCarousel);
 // ─── Envelope open ────────────────────────────────────────────────────────
-let envelopeOpenState = { meng: false, ma: false };
+let envelopeOpenState = { meng: false, ma: false, gao: false };
 let firstEnvelopeOpened = false;
 
 function openEnvelope(who) {
@@ -1824,6 +1966,8 @@ function openEnvelope(who) {
     const tabs = document.querySelectorAll('.teacher-tab');
     if (who === 'meng') {
       switchTeacher('meng', tabs[0]);
+    } else if (who === 'gao') {
+      switchTeacher('gao', tabs[2]);
     } else {
       switchTeacher('ma', tabs[1]);
     }
@@ -1836,6 +1980,7 @@ function openEnvelope(who) {
     // Already open — just switch
     const tabs = document.querySelectorAll('.teacher-tab');
     if (who === 'meng') switchTeacher('meng', tabs[0]);
+    else if (who === 'gao') switchTeacher('gao', tabs[2]);
     else switchTeacher('ma', tabs[1]);
   }
 }
@@ -1849,6 +1994,7 @@ function switchTeacher(who, tabEl) {
   // Toggle panels
   document.getElementById('teacher-meng').style.display = who === 'meng' ? 'block' : 'none';
   document.getElementById('teacher-ma').style.display = who === 'ma' ? 'block' : 'none';
+  document.getElementById('teacher-gao').style.display = who === 'gao' ? 'block' : 'none';
 }
 
 function switchGrad(teacher, grad, tabEl) {
